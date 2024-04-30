@@ -2,7 +2,7 @@ from typing import List
 
 
 class Solution:
-    def majorityElement(self, nums: List[int]) -> int:
+    def majorityElementLinear(self, nums: List[int]) -> int:
         # initialize majority element
         majorityElement = nums[0]
         count = 1
@@ -20,5 +20,12 @@ class Solution:
         # return majorityElement
         return majorityElement
     
+    def majorityElementSort(self, nums: List[int]) -> int:
+        nums.sort()
+        n = len(nums)
+        return nums[n//2]
+    
+
+# majorityElementLinear
 # Time complextiy: O(n)
 # Space complexity: O(1)
