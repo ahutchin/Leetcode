@@ -19,3 +19,6 @@ class Solution:
         
         # return majorityElement
         return majorityElement
+    
+# Time complextiy: O(n)
+# Space complexity: O(1)
