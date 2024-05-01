@@ -49,3 +49,5 @@ newInterval = [2,5]
 
 result = solution.insert2(intervals, newInterval)
 print(result)
+
+# O(n) space and time complexity
