@@ -9,6 +9,8 @@ class TreeNode:
         self.right = right
 
 class Solution:
+    # Time Complexity is O(n) because we visit each node once
+    # Space Complexity is O(h) where h is the height of the tree
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
         maxDiameter = [0]
         

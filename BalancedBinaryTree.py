@@ -10,7 +10,7 @@ class TreeNode:
         
 class Solution:
     # Time Complexity: 0(n) because each tree node is only visited once
-    # Space Complexity: O(1) because no additional memory is being used
+    # Space Complexity: O(h) for the height of the tree 
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
 
         def dfs(root: Optional[TreeNode]):
