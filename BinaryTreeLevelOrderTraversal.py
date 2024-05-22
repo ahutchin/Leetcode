@@ -1,3 +1,4 @@
+from collections import deque
 from typing import List, Optional
 
 # Definition for a binary tree node.
@@ -15,7 +16,7 @@ class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         # Define queue and result list
         result = []
-        queue = []
+        queue = deque()
 
         queue.append(root)
 
@@ -26,7 +27,7 @@ class Solution:
             # Keep track of initial queue length to control for the level
             lengthQ = len(queue)
             for i in range(lengthQ):
-                node = queue.pop(0)
+                node = queue.popleft()
                 if node:
                     level.append(node.val)
                     queue.append(node.left)
