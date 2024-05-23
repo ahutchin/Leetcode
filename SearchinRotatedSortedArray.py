@@ -9,6 +9,8 @@ from typing import List
 # Step 2: rebuild array as newArray = nums[i+1:] + nums[0:i+1]
 # Step 3: Search for target value using binary search (log(n) time)
 class Solution:
+    # Time complexity: O(log(n)) because its binary search
+    # Space complexity: O(1) because we use no additional space
     def search(self, nums: List[int], target: int) -> int:
         # We do a binary search, but break down the cases much more particularly
 
