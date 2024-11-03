@@ -22,7 +22,7 @@ class Solution:
             
         return False
     
-    def rotateString2(self, s: str, goal: str) -> bool:
+    def rotateString2(self, s: str, goal: str) -> bool: # Alternative solution solution taking advantage of trick
         # Compare lengths
         if len(s) != len(goal): 
             return False
