@@ -33,3 +33,6 @@ class Solution:
 testcase = Solution()
 result = testcase.canVisitAllRooms([[1],[2],[3],[]])
 print(result)
+
+# Time Complexity: O(n + k) only visit each room one time and do an operation for every key
+# Space Complexity: O(n) we use an array of length n to store key info
