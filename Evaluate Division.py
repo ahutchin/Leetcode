@@ -31,7 +31,7 @@ class Solution:
             return -1
 
         # Return result list from queries
-        return [dfs(a, b) for a, b in queries]
+        return [bfs(a, b) for a, b in queries]
     
 # test
 test = Solution()
