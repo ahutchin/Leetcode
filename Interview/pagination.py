@@ -53,3 +53,5 @@ class Solution:
         return result
 
 solution = Solution()
+
+# Time & Space complexity: O(n) and O(1)
