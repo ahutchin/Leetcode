@@ -8,30 +8,26 @@ class TreeNode:
         self.left = left
         self.right = right
 class Solution:
-    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+    def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
         if not root:
             return []
-
+        
         res = []
-
         queue = deque([root])
-
+    
         while queue:
-            curLevel = []
-            for i in range(len(queue)):
+            level_size = len(queue)
+            for _ in range(level_size):
                 currNode = queue.popleft()
-                curLevel.append(currNode.val)
-                
                 if currNode.left:
                     queue.append(currNode.left)
                 if currNode.right:
                     queue.append(currNode.right)
-                    
-            res.append(curLevel)
-
-        return res
+            res.append(currNode.val)  # currNode is the last node in this level
+    
+        return res            
 
 # Intuition:
-# BFS iterative implementation
-
-# O(n) time and space
+# BFS -> only add last node in level to output List
+# Time Complexity: O(n) because we visit each node 1 time, and do a constant number of operations
+# Space Complexity: O(w) where w is the longest level
