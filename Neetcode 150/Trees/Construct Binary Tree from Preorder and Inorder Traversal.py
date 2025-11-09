@@ -17,8 +17,8 @@ class Solution:
         root.right = self.buildTree(preorder[mid + 1:], inorder[mid + 1:])
 
         return root
-    
-    def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
+     
+    def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]: # using array to track indices
         inorder_map = {val: idx for idx, val in enumerate(inorder)}
         self.pre_idx = 0
         
