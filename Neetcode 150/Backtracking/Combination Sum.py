@@ -3,6 +3,7 @@ from typing import List
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
         res = []
+        candidates.sort(reverse=True)
 
         def dfs(sum: int, curr: List[int], cand: List[int]) -> None:
             if sum > target:
