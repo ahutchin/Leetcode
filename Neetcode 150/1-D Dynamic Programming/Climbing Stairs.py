@@ -23,3 +23,6 @@ class Solution:
 # The trick: climbStairs(n) = climbStairs(n - 1) + climbStairs(n - 2)
 
 print(Solution().climbStairs(4))
+
+# Time Complexity: O(n)
+# Space Complexity: O(n)
